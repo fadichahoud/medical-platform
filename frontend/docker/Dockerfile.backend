@@ -1,0 +1,19 @@
+FROM node:18-alpine
+
+WORKDIR /app
+
+# Instalar dependencias de compilación para módulos nativos
+RUN apk add --no-cache --virtual .gyp python3 make g++
+
+COPY package*.json ./
+
+RUN npm install --omit=dev
+
+COPY . .
+
+# Limpiar dependencias de compilación
+RUN apk del .gyp
+
+EXPOSE 5000
+
+CMD ["node", "server.js"]
