@@ -1,18 +1,19 @@
 {
+  "name": "medical-frontend",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test"
+  },
   "dependencies": {
-    "@emotion/react": "^11.14.0",
-    "@emotion/styled": "^11.14.1",
-    "@mui/material": "^7.2.0",
-    "axios": "^1.11.0",
-    "cors": "^2.8.5",
-    "crypto": "^1.0.1",
-    "dotenv": "^17.2.1",
-    "express": "^5.1.0",
-    "idb": "^8.0.3",
-    "mongoose": "^8.16.5",
-    "react-icons": "^5.5.0",
-    "react-router-dom": "^7.7.1",
-    "twilio": "^5.8.0",
-    "workbox-window": "^7.3.0"
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "5.0.1",
+    "react-router-dom": "^6.23.1",
+    "idb": "^7.1.1",
+    "axios": "^1.7.2",
+    "react-icons": "^5.2.1"
   }
 }

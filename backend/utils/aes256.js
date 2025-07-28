@@ -2,10 +2,6 @@ const crypto = require('crypto');
 const algorithm = 'aes-256-cbc';
 const secret = process.env.CRYPTO_SECRET;
 
-if (!secret || secret.length !== 32) {
-  throw new Error('CRYPTO_SECRET debe ser una cadena de 32 caracteres');
-}
-
 function encrypt(text) {
   const iv = crypto.randomBytes(16);
   const cipher = crypto.createCipheriv(algorithm, Buffer.from(secret), iv);
